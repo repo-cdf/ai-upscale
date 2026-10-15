@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://repo-cdf.github.io/ai-upscale/sitemap.xml

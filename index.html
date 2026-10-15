@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Upscale — Free AI Video Upscaler &amp; Enhancer (4K, 120 FPS) for NVIDIA GPUs</title>
+<meta name="description" content="Free AI video upscaler and enhancer for Windows. Upscale videos to 1080p, 2K or 4K, boost to 60/90/120 FPS with AI frame interpolation, auto-detects anime, real and 3D video. Runs locally on your NVIDIA RTX GPU — no sign-up, no watermark, free forever.">
+<meta name="keywords" content="free ai upscaler, ai video upscaler, free video upscaler, ai video enhancer, upscale video to 4k free, video upscaler for pc, anime upscaler, anime video upscaler, upscale anime to 4k, ai frame interpolation, 60fps converter, 120fps video, increase video fps, video enhancer free download, real-esrgan gui, rife interpolation, apisr, topaz video ai free alternative, wallpaper engine upscale, enhance video quality, low quality video fix, nvidia rtx upscaler, offline ai upscaler">
+<meta name="author" content="AI Upscale">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://repo-cdf.github.io/ai-upscale/">
+<meta name="theme-color" content="#0b0f14">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" href="icon.png">
+<link rel="apple-touch-icon" href="icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="AI Upscale">
+<meta property="og:title" content="AI Upscale — Free AI Video Upscaler & 120 FPS Interpolation">
+<meta property="og:description" content="Upscale videos to 4K and 120 FPS on your own NVIDIA GPU. Anime, real and 3D auto-detected. Free forever, no sign-up, no watermark.">
+<meta property="og:url" content="https://repo-cdf.github.io/ai-upscale/">
+<meta property="og:image" content="https://repo-cdf.github.io/ai-upscale/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="AI Upscale — Free AI Video Upscaler & Enhancer">
+<meta name="twitter:description" content="4K upscaling + 120 FPS interpolation on your NVIDIA GPU. Free forever, no sign-up.">
+<meta name="twitter:image" content="https://repo-cdf.github.io/ai-upscale/og-image.png">
+<link rel="stylesheet" href="style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "AI Upscale",
+  "applicationCategory": "MultimediaApplication",
+  "operatingSystem": "Windows 10, Windows 11",
+  "softwareVersion": "1.0.0",
+  "description": "Free AI video upscaler and enhancer: upscale to 1080p, 2K or 4K and interpolate to 60/90/120 FPS. Auto-detects anime, real and 3D content. Runs locally on NVIDIA RTX GPUs.",
+  "url": "https://repo-cdf.github.io/ai-upscale/",
+  "downloadUrl": "https://github.com/repo-cdf/ai-upscale/releases/download/v1.0.0/AI-Upscale-v1.0.0-Windows-NVIDIA.zip",
+  "image": "https://repo-cdf.github.io/ai-upscale/og-image.png",
+  "screenshot": "https://repo-cdf.github.io/ai-upscale/screenshot.jpg",
+  "license": "https://www.gnu.org/licenses/gpl-3.0.html",
+  "isAccessibleForFree": true,
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "featureList": ["AI video upscaling to 1080p, 2K and 4K", "AI frame interpolation to 60, 90 and 120 FPS", "Automatic content-type detection (real, anime, 3D animation)", "Fake-HD (soft source) detection", "Live color grading, sharpening, noise reduction and debanding", "NVIDIA TensorRT acceleration", "Wallpaper Engine friendly screen-size output"]
+}
+</script>
+</head>
+<body>
+
+<header class="top" id="top">
+  <a class="brand" href="#" aria-label="AI Upscale home">
+    <img src="icon.png" alt="" width="34" height="34">
+    <span><b>AI Upscale</b><small>free AI video upscaler</small></span>
+  </a>
+  <nav class="nav">
+    <a href="#features">Features</a>
+    <a href="#compare">Before / after</a>
+    <a href="#install">Install</a>
+    <a href="#faq">FAQ</a>
+  </nav>
+  <button class="donate-pill" data-donate aria-haspopup="dialog">❤️ Donate ❤️</button>
+</header>
+
+<main>
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="hero-text">
+      <div class="badges"><span>100% free</span><span>No sign-up</span><span>No watermark</span><span>Runs offline</span></div>
+      <h1>Free AI video upscaler<br><span class="grad">&amp; 120 FPS enhancer</span></h1>
+      <p class="lead">Turn blurry, low-quality videos into crisp <b>1080p, 2K or 4K</b> and make them silky smooth at
+        <b>60, 90 or 120 FPS</b> — right on your own NVIDIA graphics card. It even <b>detects by itself</b> whether your
+        video is real footage, anime or 3D animation and picks the best AI for it.</p>
+
+      <div class="cta">
+        <a class="btn-download" id="dl" href="https://github.com/repo-cdf/ai-upscale/releases/download/v1.0.0/AI-Upscale-v1.0.0-Windows-NVIDIA.zip">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0-5-5m5 5 5-5M4 19h16"/></svg>
+          <span><b>Download for Windows</b><small id="dlMeta">v1.0.0 · free · 167 KB installer</small></span>
+        </a>
+        <a class="btn-vt" id="vt" href="https://www.virustotal.com/" target="_blank" rel="noopener" title="Independent scan by 60+ antivirus engines">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 4 5v6c0 5 3.4 9.3 8 11 4.6-1.7 8-6 8-11V5z"/><path d="m8.5 12 2.5 2.5 4.5-5"/></svg>
+          <span><b>VirusTotal: clean</b><small id="vtMeta">see the full antivirus report</small></span>
+        </a>
+      </div>
+      <p class="cta-note">Windows 10/11 · NVIDIA RTX GPU · <a href="https://github.com/repo-cdf/ai-upscale" target="_blank" rel="noopener">open source on GitHub</a></p>
+    </div>
+
+    <div class="hero-visual">
+      <div class="ba" id="ba" aria-label="Before and after comparison — drag the handle">
+        <img src="after.jpg" alt="Big Buck Bunny frame upscaled with AI Upscale — sharp and clean" width="1600" height="900">
+        <div class="ba-before" id="baBefore"><img src="before.jpg" alt="Original low-resolution 360p frame — blurry" width="1600" height="900"></div>
+        <div class="ba-handle" id="baHandle"><span></span></div>
+        <span class="ba-tag l">Original 360p</span><span class="ba-tag r">AI Upscale · 1080p</span>
+      </div>
+      <p class="credit">Drag to compare · Big Buck Bunny © Blender Foundation, CC BY 3.0 · 3D Animation detected automatically</p>
+    </div>
+  </section>
+
+  <!-- ============ KNOW BEFORE YOU DOWNLOAD ============ -->
+  <section class="know" id="install">
+    <h2>Everything you need to know before downloading</h2>
+    <div class="know-grid">
+      <div class="card">
+        <h3>💻 What you need</h3>
+        <ul>
+          <li><b>Windows 10 or 11</b> (64-bit)</li>
+          <li><b>NVIDIA GeForce RTX</b> card — RTX 20, 30, 40 or 50 series (desktop or laptop)</li>
+          <li><b>6 GB VRAM</b> minimum, 8 GB+ ideal for 4K</li>
+          <li><b>NVIDIA driver 580 or newer</b> (update in the NVIDIA App)</li>
+          <li><b>~12 GB free disk space</b> during install (~7 GB after)</li>
+          <li>Internet for the one-time install only</li>
+        </ul>
+        <p class="muted">AMD / Intel graphics and Mac are not supported yet — the AI runs on NVIDIA's CUDA.</p>
+      </div>
+      <div class="card">
+        <h3>⚡ Install in 3 steps</h3>
+        <ol class="steps">
+          <li><b>Extract the zip</b> to a folder you own, e.g. <code>C:\AI Upscale</code> or Documents (not "Program Files").</li>
+          <li><b>Double-click <code>Install.bat</code></b> and keep the window open until it says DONE (10–20 min, ~5 GB download).</li>
+          <li><b>Open “AI Upscale”</b> from your desktop. That's it!</li>
+        </ol>
+        <p class="muted">The installer downloads a private copy of Python, PyTorch/TensorRT and the AI models from their official sources. Nothing is installed system-wide — delete the folder to uninstall.</p>
+      </div>
+      <div class="card">
+        <h3>🛡️ Safe &amp; private</h3>
+        <ul>
+          <li>Your videos <b>never leave your PC</b> — everything runs locally</li>
+          <li>No account, no tracking, no ads in the app</li>
+          <li>Open source (GPL-3.0) — read every line on GitHub</li>
+          <li>Scanned on VirusTotal by 60+ antivirus engines</li>
+          <li>Windows SmartScreen may say “unrecognized app” because it's new and unsigned — click <i>More info → Run anyway</i></li>
+        </ul>
+        <p class="muted sha">SHA-256: <code id="sha">—</code></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ KIND NOTE ============ -->
+  <section class="note">
+    <div class="note-card">
+      <span class="note-heart">💜</span>
+      <div>
+        <h2>Made for everyone — especially low &amp; mid-range GPUs</h2>
+        <p>Great video tools shouldn't need a $2,000 graphics card or a monthly subscription. AI Upscale was built and tuned on an
+          everyday <b>RTX 5060 laptop</b>, with lots of tricks (TensorRT, smart tiling, compiled models) so it runs fast on the kind of
+          GPU most people actually have. Got a high-end card? It flies even faster. It's free, and it will stay free — no pro version,
+          no limits, no catch. 🙂</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FEATURES ============ -->
+  <section class="features" id="features">
+    <h2>Features</h2>
+    <p class="sub">Everything a pro video enhancer does — without the price tag.</p>
+    <div class="feat-grid">
+      <article class="feat star">
+        <span class="fi">🧠</span>
+        <h3>Automatic content detection</h3>
+        <p>Drop in a video and a small vision AI (CLIP) recognizes whether it's <b>real footage, anime or 3D animation</b> — then
+          switches to the AI models made for that kind of video. No guessing which setting to pick.</p>
+      </article>
+      <article class="feat">
+        <span class="fi">🔎</span>
+        <h3>Upscale to 1080p, 2K, 4K or your screen</h3>
+        <p>State-of-the-art models (Real-ESRGAN, APISR, AnimeJaNai, Nomos2, …) rebuild real detail instead of just stretching pixels.
+          “Screen” renders exactly for your monitor — perfect for Wallpaper Engine.</p>
+      </article>
+      <article class="feat">
+        <span class="fi">🎞️</span>
+        <h3>60 / 90 / 120 FPS interpolation</h3>
+        <p>RIFE 4.26 creates brand-new in-between frames for buttery-smooth motion, with scene-cut detection so cuts never smear.</p>
+      </article>
+      <article class="feat">
+        <span class="fi">🪄</span>
+        <h3>Fixes “fake HD” videos</h3>
+        <p>Many “1080p” files were stretched from a lower resolution. AI Upscale measures the real detail and lets the AI work from it —
+          the difference on soft, re-encoded and phone videos is huge.</p>
+      </article>
+      <article class="feat">
+        <span class="fi">⚡</span>
+        <h3>Speed / Balanced / Max detail</h3>
+        <p>Three quality tiers, accelerated with NVIDIA TensorRT and compiled models — up to 3× faster than plain PyTorch, with identical output.</p>
+      </article>
+      <article class="feat">
+        <span class="fi">🎨</span>
+        <h3>Live color grading</h3>
+        <p>Brightness, contrast, gamma, saturation, vibrance, temperature, tint and hue — previewed live on the moving video.
+          One-click looks: Vivid, Cinematic, Anime Pop, Warm, Cool, B&amp;W.</p>
+      </article>
+      <article class="feat">
+        <span class="fi">🧽</span>
+        <h3>Cleanup &amp; detail</h3>
+        <p>Temporal noise reduction, debanding for smooth gradients, adaptive sharpening and optional film grain.</p>
+      </article>
+      <article class="feat">
+        <span class="fi">👀</span>
+        <h3>See it before you render</h3>
+        <p>Before/after slider with zoom, “Compare looks” (Real vs Anime vs 3D side by side at your screen's real size),
+          and a 10-second test render.</p>
+      </article>
+      <article class="feat">
+        <span class="fi">🖥️</span>
+        <h3>One-click presets</h3>
+        <p>Wallpaper, Everyday 2K, Smooth 2K, Crisp 4K, 4K 120 Ultra, Max quality — or tune everything yourself.</p>
+      </article>
+      <article class="feat">
+        <span class="fi">📊</span>
+        <h3>Live hardware monitor</h3>
+        <p>GPU load, encoder, temperature, VRAM and power while rendering. Keeps your PC awake and pauses Wallpaper Engine during renders.</p>
+      </article>
+      <article class="feat">
+        <span class="fi">🎧</span>
+        <h3>Pro-quality output</h3>
+        <p>10-bit HEVC, AV1 or H.264 via NVENC, original audio kept, trim built in, MP4 or MKV (keeps subtitles).</p>
+      </article>
+      <article class="feat wide">
+        <span class="fi">🔒</span>
+        <h3>100% local &amp; private</h3>
+        <p>No uploads, no cloud, no account. Your videos stay on your PC — it even works offline after installing.</p>
+      </article>
+    </div>
+  </section>
+
+  <div class="ad-slot" data-slot="native" hidden></div>
+
+  <!-- ============ COMPARE / SCREENSHOT ============ -->
+  <section class="compare" id="compare">
+    <h2>Real results, real app</h2>
+    <div class="zoom-pair">
+      <figure><img src="zoom-before.jpg" alt="Zoomed original 360p frame — soft fur and blurry edges" loading="lazy" width="480" height="360"><figcaption>Original 360p (zoomed)</figcaption></figure>
+      <figure><img src="zoom-after.jpg" alt="Zoomed AI upscaled frame — sharp lines and clean detail" loading="lazy" width="480" height="360"><figcaption>AI Upscale · Max detail (zoomed)</figcaption></figure>
+    </div>
+    <figure class="shot"><img src="screenshot.jpg" alt="AI Upscale app screenshot: before/after viewer, quick presets, automatic 3D Animation detection, resolution and FPS settings" loading="lazy" width="1600" height="1010">
+      <figcaption>The app — notice the “Detected” badge: it recognized the 3D animation by itself.</figcaption></figure>
+  </section>
+
+  <!-- ============ SPEED ============ -->
+  <section class="speed">
+    <h2>How fast is it?</h2>
+    <p class="sub">Measured on an RTX 5060 <b>Laptop</b> GPU (8 GB) — a 50-second clip upscaled to 2K at 120 FPS:</p>
+    <div class="speed-grid">
+      <div class="sp"><b>≈ 3 min</b><span>Speed</span><small>great for quick jobs &amp; previews</small></div>
+      <div class="sp mid"><b>≈ 7 min</b><span>Balanced</span><small>the sweet spot — recommended</small></div>
+      <div class="sp"><b>≈ 55 min</b><span>Max detail</span><small>transformer model, for final renders</small></div>
+    </div>
+    <p class="muted center">Faster GPUs are proportionally faster. The first render with a new model takes an extra 1–3 minutes to optimise it for your GPU (once).</p>
+  </section>
+
+  <!-- ============ HOW TO USE ============ -->
+  <section class="how">
+    <h2>How to use it</h2>
+    <div class="how-grid">
+      <div><span class="num">1</span><h3>Drop a video</h3><p>MP4, MKV, MOV, AVI, WEBM… The content type is detected automatically.</p></div>
+      <div><span class="num">2</span><h3>Pick a preset</h3><p>Or choose resolution, FPS and quality yourself, then tweak colors live.</p></div>
+      <div><span class="num">3</span><h3>Preview</h3><p>Drag the before/after slider, zoom in, run a 10-second test.</p></div>
+      <div><span class="num">4</span><h3>Upscale</h3><p>Hit “Upscale video” — your finished file lands next to the original (or any folder you pick).</p></div>
+    </div>
+  </section>
+
+  <div class="ad-slot" data-slot="banner" hidden></div>
+
+  <!-- ============ FAQ ============ -->
+  <section class="faq" id="faq">
+    <h2>FAQ</h2>
+    <details open><summary>Is it really free?</summary><p>Yes — 100% free, forever. No trial, no watermark, no sign-up, no pro version, no length limit. If it helps you, a donation is always appreciated but never required. 💜</p></details>
+    <details><summary>Is it safe? My antivirus or SmartScreen warned me.</summary><p>The download is scanned by 60+ engines on VirusTotal (green button above) and the full source code is on GitHub. Because the installer is new and not code-signed, Windows SmartScreen may show “Windows protected your PC” — click <i>More info → Run anyway</i>. The installer only writes inside its own folder.</p></details>
+    <details><summary>Do my videos get uploaded anywhere?</summary><p>Never. Everything runs on your own GPU. After installing it works completely offline.</p></details>
+    <details><summary>Which graphics cards work? What about AMD or Intel?</summary><p>Any NVIDIA GeForce RTX card (20/30/40/50 series, desktop or laptop) with 6 GB+ VRAM. It was developed on an RTX 5060 Laptop GPU, so mid-range cards are first-class citizens. AMD, Intel and Mac aren't supported yet because the AI runs on NVIDIA CUDA.</p></details>
+    <details><summary>Is this a free alternative to paid upscalers like Topaz Video AI?</summary><p>It's an independent, free and open-source tool that covers the same core jobs — AI upscaling, frame interpolation and enhancement — using well-known open models. Results depend on your video, so try the 10-second test and see for yourself.</p></details>
+    <details><summary>What's the “automatic content detection”?</summary><p>When you open a video, a small AI looks at a few frames and decides whether it's real footage, anime or 3D animation, then selects the matching upscaling models. You'll see a “Detected” badge, and you can always override it.</p></details>
+    <details><summary>Can I make Wallpaper Engine wallpapers with it?</summary><p>Yes — that's what it was made for! Use the <b>Wallpaper</b> preset: it renders exactly at your screen's resolution (no wasted pixels) at 120 FPS, and pauses Wallpaper Engine while rendering so your GPU is free.</p></details>
+    <details><summary>Why is the first render slower?</summary><p>The first time you use a model at a new video size, AI Upscale compiles it specifically for your GPU (1–3 minutes, shown as “Optimizing”). After that it's cached and starts instantly.</p></details>
+    <details><summary>Where do the AI models come from?</summary><p>From their original authors' official releases (Real-ESRGAN, APISR, AnimeJaNai, AniScale, Nomos2, RIFE, CLIP…), downloaded by the installer and checked with SHA-256. Some models are licensed for non-commercial use, so please use AI Upscale for personal projects. Full credits are in THIRD-PARTY-NOTICES.txt.</p></details>
+    <details><summary>How do I uninstall?</summary><p>Delete the AI Upscale folder and its shortcuts. Nothing else is changed on your PC.</p></details>
+  </section>
+
+  <!-- ============ DONATE ============ -->
+  <section class="give">
+    <div class="give-card">
+      <h2>❤️ Keep it free for everyone ❤️</h2>
+      <p>AI Upscale is a gift — made by one person, given away for free. If it brought an old video back to life for you,
+        a small donation helps keep it alive and improving. Even just sharing it with a friend means a lot. Thank you! 🙏</p>
+      <div class="give-actions">
+        <button class="btn-paypal" data-paypal>Donate with PayPal</button>
+        <button class="btn-copy" data-copy-email>📋 Copy PayPal email</button>
+        <button class="btn-copy" data-share>🔗 Share AI Upscale</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="credits">
+    <h2>Credits</h2>
+    <p>AI Upscale stands on the shoulders of amazing open-source work: Real-ESRGAN (Xintao Wang et al.), APISR (Boyang Wang et al.),
+      AnimeJaNai (the-database), AniScale 2 (Sirosky), LiveAction SPAN (jcj83429), Nomos2 MoSR (Helaman), CGIMaster (Madiator),
+      RIFE (hzwer) via vs-rife (HolyWu), CLIP (OpenAI), spandrel, PyTorch, NVIDIA TensorRT, FFmpeg and uv. Demo footage: Big Buck Bunny
+      © Blender Foundation, CC BY 3.0.</p>
+  </section>
+</main>
+
+<footer class="foot">
+  <span>© <span id="year">2026</span> AI Upscale — free &amp; open source (GPL-3.0)</span>
+  <span><a href="https://github.com/repo-cdf/ai-upscale" target="_blank" rel="noopener">GitHub</a> · <a href="privacy.html">Privacy</a> · <a href="#" data-donate>❤️ Donate</a></span>
+</footer>
+
+<!-- Donation dialog -->
+<div class="modal" id="donate" role="dialog" aria-modal="true" aria-labelledby="donateTitle" hidden>
+  <div class="modal-card">
+    <button class="modal-x" data-close aria-label="Close">✕</button>
+    <div class="modal-heart">💜</div>
+    <h2 id="donateTitle">Thank you for even thinking about it ❤️</h2>
+    <p>AI Upscale is and will always be free. Donations simply help cover the time it takes to keep improving it. Any amount — big or small — is truly appreciated.</p>
+    <div class="email-box">
+      <span>PayPal:</span><code id="ppEmail">rayan6razan@gmail.com</code>
+      <button class="btn-copy sm" data-copy-email>📋 Copy</button>
+    </div>
+    <button class="btn-paypal wide" data-paypal>Donate with PayPal →</button>
+    <p class="muted small">Opens PayPal's official, secure checkout in a new tab — you choose the amount there.</p>
+  </div>
+</div>
+
+<div class="toast" id="toast" hidden></div>
+<script src="site.js"></script>
+</body>
+</html>
