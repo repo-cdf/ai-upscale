@@ -18,7 +18,7 @@ const CONFIG = {
   // Adsterra units for repo-cdf.github.io (publisher dashboard: beta.publishers.adsterra.com)
   adsterra: {
     host: 'https://bauval.org',
-    native: '72df87364e9df62ec9c2e66304df605a',
+    native: '',   // native widget removed 2026-10-15: it attracted dating/gambling ads
     banner728x90: 'a759d28079132d88e05907e5c6e67e76',
     banner320x50: '606a341ab3645a1ad03056c96eb92c09',
   },
