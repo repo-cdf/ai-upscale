@@ -9,7 +9,7 @@ const CONFIG = {
   sizeLabel: '167 KB installer',
   sha256: '6d1980c7af304fe2b7492a11e78f2d0017928b7b2d462a5c628dba8899082b35',
   virustotal: 'https://www.virustotal.com/gui/file/6d1980c7af304fe2b7492a11e78f2d0017928b7b2d462a5c628dba8899082b35',
-  vtResult: '',            // e.g. '0 / 62 engines' — shown on the green button
+  vtResult: '0 / 61 engines',   // shown on the green button (scanned 2026-10-15)
 
   // PayPal (Donate buttons aren't available for Saudi accounts → regular checkout link, visitor picks the amount)
   paypalEmail: 'rayan6razan@gmail.com',
