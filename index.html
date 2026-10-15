@@ -72,17 +72,36 @@
         <b>60, 90 or 120 FPS</b> — right on your own NVIDIA graphics card. It even <b>detects by itself</b> whether your
         video is real footage, anime or 3D animation and picks the best AI for it.</p>
 
-      <div class="cta">
-        <a class="btn-download" id="dl" href="https://github.com/repo-cdf/ai-upscale/releases/download/v1.0.0/AI-Upscale-v1.0.0-Windows-NVIDIA.zip">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0-5-5m5 5 5-5M4 19h16"/></svg>
-          <span><b>Download for Windows</b><small id="dlMeta">v1.0.0 · free · 167 KB installer</small></span>
-        </a>
+      <div class="price-card">
+        <div class="price-head">
+          <span class="price-tag">$5</span>
+          <span class="price-text"><b>Pay what feels right</b><small>suggested price · totally optional</small></span>
+        </div>
+        <div class="price-options">
+          <div><span>💳</span><b>Pay $5 now</b><small>and say thanks</small></div>
+          <div><span>⏳</span><b>Pay later</b><small>whenever you like</small></div>
+          <div><span>💜</span><b>Free forever</b><small>all features, no strings</small></div>
+        </div>
+        <div class="cta">
+          <button class="btn-pay" id="payNow" type="button">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h18v10H3z"/><path d="M3 10h18M7 14h3"/></svg>
+            <span><b>Pay $5 &amp; download</b><small>secure PayPal checkout</small></span>
+          </button>
+          <a class="btn-download" id="dl" href="https://github.com/repo-cdf/ai-upscale/releases/download/v1.0.0/AI-Upscale-v1.0.0-Windows-NVIDIA.zip">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0-5-5m5 5 5-5M4 19h16"/></svg>
+            <span><b>Download free</b><small id="dlMeta">v1.0.0 · 167 KB installer</small></span>
+          </a>
+        </div>
+        <p class="price-note">Same app, same features, either way — nothing is locked. Paying simply helps me keep making
+          free programs for everyone. Paid, paying later or not paying at all: <b>no hard feelings, ever</b> — your happiness is what matters. 💜</p>
+      </div>
+      <div class="cta cta-sub">
         <a class="btn-vt" id="vt" href="https://www.virustotal.com/" target="_blank" rel="noopener" title="Independent scan by 60+ antivirus engines">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 4 5v6c0 5 3.4 9.3 8 11 4.6-1.7 8-6 8-11V5z"/><path d="m8.5 12 2.5 2.5 4.5-5"/></svg>
           <span><b>VirusTotal: clean</b><small id="vtMeta">see the full antivirus report</small></span>
         </a>
+        <p class="cta-note">Windows 10/11 · NVIDIA RTX GPU<br><a href="https://github.com/repo-cdf/ai-upscale" target="_blank" rel="noopener">open source on GitHub</a></p>
       </div>
-      <p class="cta-note">Windows 10/11 · NVIDIA RTX GPU · <a href="https://github.com/repo-cdf/ai-upscale" target="_blank" rel="noopener">open source on GitHub</a></p>
     </div>
 
     <div class="hero-visual">
@@ -261,7 +280,12 @@
   <!-- ============ FAQ ============ -->
   <section class="faq" id="faq">
     <h2>FAQ</h2>
-    <details open><summary>Is it really free?</summary><p>Yes — 100% free, forever. No trial, no watermark, no sign-up, no pro version, no length limit. If it helps you, a donation is always appreciated but never required. 💜</p></details>
+    <details open><summary>Is it really free? Why is there a $5 price?</summary><p>Yes — 100% free, forever. The $5 is only a <b>suggested, optional</b> price for people who want to say thanks. Everyone gets the exact same app: no trial, no watermark, no sign-up, no pro version, no length limit, nothing locked. 💜</p></details>
+    <details><summary>What do I get if I pay?</summary><p>The same app as everyone else — plus a big thank-you from me and the good feeling of helping. 😊 Your $5 goes straight into building more <b>100% free</b> programs for everyone, especially people who can't afford expensive software.</p></details>
+    <details><summary>Can I download for free and pay later?</summary><p>Of course! Try it first, take your time. If it ends up helping you, the ❤️ Donate button at the top of this page is always there — any amount, whenever you like. And if you never pay, that's completely fine too.</p></details>
+    <details><summary>I can't afford to pay — is that okay?</summary><p>Absolutely, with all my heart. 💜 This tool exists for you. Please download it, enjoy it, and keep it forever with every feature. No hard feelings at all — your happiness matters more than the money. Sharing it with a friend is a wonderful way to help too.</p></details>
+    <details><summary>I paid but the download didn't start. What now?</summary><p>After paying, PayPal shows a <b>“Return to merchant”</b> link — click it to come back here, where your download starts with a little thank-you. 🎉 If anything goes wrong, just use the <b>Download free</b> button — it's the very same file. Thank you for your support!</p></details>
+    <details><summary>Is the payment safe?</summary><p>Yes. Payments go through PayPal's official, secure checkout — this website never sees your card or account details.</p></details>
     <details><summary>Is it safe? My antivirus or SmartScreen warned me.</summary><p>The download is scanned by 60+ engines on VirusTotal (green button above) and the full source code is on GitHub. Because the installer is new and not code-signed, Windows SmartScreen may show “Windows protected your PC” — click <i>More info → Run anyway</i>. The installer only writes inside its own folder.</p></details>
     <details><summary>Do my videos get uploaded anywhere?</summary><p>Never. Everything runs on your own GPU. After installing it works completely offline.</p></details>
     <details><summary>Which graphics cards work? What about AMD or Intel?</summary><p>Any NVIDIA GeForce RTX card (20/30/40/50 series, desktop or laptop) with 6 GB+ VRAM. It was developed on an RTX 5060 Laptop GPU, so mid-range cards are first-class citizens. AMD, Intel and Mac aren't supported yet because the AI runs on NVIDIA CUDA.</p></details>
@@ -314,6 +338,23 @@
     </div>
     <button class="btn-paypal wide" data-paypal>Donate with PayPal →</button>
     <p class="muted small">Opens PayPal's official, secure checkout in a new tab — you choose the amount there.</p>
+  </div>
+</div>
+
+<!-- Thank-you dialog (shown when someone comes back from PayPal) -->
+<div class="modal" id="thanks" role="dialog" aria-modal="true" aria-labelledby="thanksTitle" hidden>
+  <div class="modal-card thanks-card">
+    <button class="modal-x" data-close aria-label="Close">✕</button>
+    <div class="confetti" aria-hidden="true">🎉 💜 ✨ 🙏 ✨ 💜 🎉</div>
+    <h2 id="thanksTitle">Thank you so much for supporting me! 💜</h2>
+    <p id="thanksText">You just made my day. 😊 Your kindness helps keep AI Upscale — and every program I make — free for everyone,
+      including people who can't afford to pay. I truly appreciate you! 🙏✨</p>
+    <p class="dl-status" id="thanksDl">⬇️ Your download is starting…</p>
+    <a class="btn-download wide" id="thanksBtn" href="#">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0-5-5m5 5 5-5M4 19h16"/></svg>
+      <span><b id="thanksBtnLabel">Download didn't start? Click here</b></span>
+    </a>
+    <p class="muted small">Enjoy your crisp, smooth videos — and have a wonderful day! 🌟</p>
   </div>
 </div>
 

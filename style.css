@@ -65,6 +65,45 @@ h1 { font-size: clamp(36px, 5vw, 58px); letter-spacing: -.5px; }
 .btn-download small, .btn-vt small { font-size: 13px; opacity: .9; }
 .cta-note { color: var(--muted); font-size: 14px; margin-top: 14px; }
 
+/* pay-what-you-want card */
+.price-card { max-width: 620px; padding: 22px; border-radius: 20px; background: linear-gradient(160deg, rgba(167,139,250,.10), rgba(34,211,238,.05)), var(--card); border: 1px solid var(--line2); box-shadow: 0 24px 60px -30px rgba(129,140,248,.6); }
+.price-head { display: flex; align-items: center; gap: 14px; margin-bottom: 16px; }
+.price-tag { font-size: 40px; font-weight: 800; line-height: 1; background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.price-text { display: flex; flex-direction: column; line-height: 1.25; }
+.price-text b { font-size: 18px; }
+.price-text small { color: var(--muted); font-size: 13.5px; }
+.price-options { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 18px; }
+.price-options div { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 2px; padding: 12px 8px; border-radius: 14px; background: rgba(255,255,255,.03); border: 1px solid var(--line); }
+.price-options span { font-size: 22px; }
+.price-options b { font-size: 14.5px; }
+.price-options small { color: var(--muted); font-size: 12.5px; }
+.price-options div:last-child { border-color: rgba(244,114,182,.35); background: rgba(244,114,182,.06); }
+.btn-pay { display: inline-flex; align-items: center; gap: 12px; padding: 14px 22px; border: 0; border-radius: 14px; cursor: pointer; font: inherit; text-align: left; color: #111; background: #ffc439; box-shadow: 0 14px 34px -14px rgba(255,196,57,.85), inset 0 1px 0 rgba(255,255,255,.4); transition: transform .15s, filter .15s; }
+.btn-pay:hover { transform: translateY(-2px); filter: brightness(1.06); }
+.btn-pay svg { width: 28px; height: 28px; fill: none; stroke: #111; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; flex: none; }
+.btn-pay span { display: flex; flex-direction: column; line-height: 1.2; }
+.btn-pay b { font-size: 19px; }
+.btn-pay small { font-size: 13px; opacity: .75; }
+.price-card .cta > * { flex: 1 1 220px; }
+.price-card .btn-pay b, .price-card .btn-download b { font-size: 17px; white-space: nowrap; }
+.price-note { color: var(--text2); font-size: 14.5px; line-height: 1.6; margin: 16px 0 0; }
+.cta-sub { align-items: center; margin-top: 16px; }
+.cta-sub .cta-note { margin: 0; line-height: 1.5; }
+
+/* thank-you popup */
+.thanks-card { width: min(500px, 100%); }
+.confetti { font-size: 26px; letter-spacing: 4px; margin-bottom: 8px; animation: bounce 1.6s ease-in-out infinite; }
+@keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
+.dl-status { font-weight: 600; color: var(--text) !important; }
+.btn-download.wide { width: 100%; justify-content: center; margin: 6px 0 12px; }
+.btn-download.wide b { font-size: 16px; }
+@media (max-width: 560px) {
+  .price-card { padding: 16px; }
+  .price-options { gap: 6px; }
+  .price-options div { padding: 10px 4px; }
+  .price-options small { font-size: 11.5px; }
+}
+
 .ba { position: relative; border-radius: var(--r); overflow: hidden; border: 1px solid var(--line2); box-shadow: 0 30px 80px -30px rgba(0,0,0,.8), 0 0 0 1px rgba(167,139,250,.15);
   aspect-ratio: 16/9; cursor: ew-resize; user-select: none; touch-action: pan-y; }
 .ba > img, .ba-before img { width: 100%; height: 100%; object-fit: cover; }

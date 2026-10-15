@@ -14,6 +14,7 @@ const CONFIG = {
   // PayPal (Donate buttons aren't available for Saudi accounts → regular checkout link, visitor picks the amount)
   paypalEmail: 'rayan6razan@gmail.com',
   currency: 'USD',
+  suggestedPrice: 5,   // optional "Pay $5 & download" — the free button always stays
 
   // Adsterra units for repo-cdf.github.io (publisher dashboard: beta.publishers.adsterra.com)
   adsterra: {
@@ -44,17 +45,45 @@ async function copyText(text, msg) {
   toast(msg);
 }
 
-function paypalUrl() {
+// kind 'paid' = the optional $5 (download starts on return), 'donate' = visitor picks the amount
+function paypalUrl(kind = 'donate') {
+  const paid = kind === 'paid';
   const p = new URLSearchParams({
     cmd: '_xclick',
     business: CONFIG.paypalEmail,
-    item_name: 'Donation for AI Upscale - keeping it free for everyone',
+    item_name: paid ? 'AI Upscale - optional $5 support (thank you!)' : 'Donation for AI Upscale - keeping it free for everyone',
     no_shipping: '1',
     currency_code: CONFIG.currency,
-    return: CONFIG.siteUrl + '#thanks',
+    rm: '1',
+    return: CONFIG.siteUrl + '?thanks=' + kind,
     cancel_return: CONFIG.siteUrl,
   });
+  if (paid) p.set('amount', String(CONFIG.suggestedPrice));
   return 'https://www.paypal.com/cgi-bin/webscr?' + p.toString();
+}
+
+function startDownload() {
+  const a = Object.assign(document.createElement('a'), { href: CONFIG.download, download: '' });
+  document.body.appendChild(a); a.click(); a.remove();
+}
+
+// visitor came back from PayPal → thank-you popup (+ download for the $5 checkout)
+function showThanks() {
+  const q = new URLSearchParams(location.search);
+  const kind = q.get('thanks') || (location.hash === '#thanks' ? 'donate' : '');
+  if (!kind) return;
+  history.replaceState(null, '', location.pathname);
+  const m = $('#thanks'), btn = $('#thanksBtn'), status = $('#thanksDl');
+  btn.href = CONFIG.download;
+  if (kind === 'paid') {
+    setTimeout(() => { startDownload(); status.textContent = '✅ Your download has started — check your Downloads folder!'; }, 1200);
+  } else {
+    $('#thanksText').textContent = 'Your donation truly means the world to me. 😊 It helps keep AI Upscale — and every program I make — '
+      + 'free for everyone, including people who can\'t afford to pay. I really appreciate you! 🙏✨';
+    status.hidden = true;
+    $('#thanksBtnLabel').textContent = 'Download AI Upscale';
+  }
+  m.hidden = false;
 }
 
 /* ---------------- before / after slider ---------------- */
@@ -124,7 +153,8 @@ function init() {
   $('#year').textContent = new Date().getFullYear();
   const dl = $('#dl');
   dl.href = CONFIG.download;
-  $('#dlMeta').textContent = `v${CONFIG.version} · free · ${CONFIG.sizeLabel}`;
+  $('#dlMeta').textContent = `v${CONFIG.version} · ${CONFIG.sizeLabel}`;
+  $('#payNow').addEventListener('click', () => { location.href = paypalUrl('paid'); });
   $('#sha').textContent = CONFIG.sha256;
   const vt = $('#vt');
   vt.href = CONFIG.virustotal;
@@ -132,19 +162,19 @@ function init() {
 
   const modal = $('#donate');
   const open = (e) => { e.preventDefault(); modal.hidden = false; };
-  const close = () => { modal.hidden = true; };
+  const close = () => { $$('.modal').forEach((m) => { m.hidden = true; }); };
   $$('[data-donate]').forEach((b) => b.addEventListener('click', open));
   $$('[data-close]').forEach((b) => b.addEventListener('click', close));
-  modal.addEventListener('click', (e) => { if (e.target === modal) close(); });
+  $$('.modal').forEach((m) => m.addEventListener('click', (e) => { if (e.target === m) close(); }));
   document.addEventListener('keydown', (e) => { if (e.key === 'Escape') close(); });
-  $$('[data-paypal]').forEach((b) => b.addEventListener('click', () => window.open(paypalUrl(), '_blank', 'noopener')));
+  $$('[data-paypal]').forEach((b) => b.addEventListener('click', () => window.open(paypalUrl('donate'), '_blank', 'noopener')));
   $$('[data-copy-email]').forEach((b) => b.addEventListener('click', () => copyText(CONFIG.paypalEmail, 'PayPal email copied — thank you so much! 💜')));
   $$('[data-share]').forEach((b) => b.addEventListener('click', async () => {
     const data = { title: 'AI Upscale — free AI video upscaler', text: 'Free AI video upscaler & 120 FPS interpolation for NVIDIA GPUs. No sign-up.', url: CONFIG.siteUrl };
     if (navigator.share) { try { await navigator.share(data); return; } catch (e) { /* fall through */ } }
     copyText(CONFIG.siteUrl, 'Link copied — thanks for sharing! ❤️');
   }));
-  if (location.hash === '#thanks') toast('Thank you so much for your donation! ❤️');
+  showThanks();
 
   initSlider();
   initAds();
